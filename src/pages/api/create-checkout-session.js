@@ -24,7 +24,7 @@ export default async (req, res) => {
     },
     line_items: transformedItems,
     mode: "payment",
-    success_url: `${process.env.HOST}/success`,
+    success_url: `${process.env.HOST}/success`, //dont forge to change HOST when you're deploying
     cancel_url: `${process.env.HOST}/checkout`,
     metadata: {
       email,

@@ -10,6 +10,10 @@ import axios from "axios";
 
 const stripePromise = loadStripe(process.env.stripe_public_key); //for the key to be published(All CAP won't work); check next.config.js
 
+//for test card : 4242 4242 4242 4242  04/24  424
+//after login stripe cli run in vs terminal to get STRIPE_SIGNING_SECRET:  stripe listen --forward-to localhost:3000/api/webhook
+//re-auth after 90 days
+
 function checkout() {
   const items = useSelector(selectItems);
   const total = useSelector(selectTotal);
