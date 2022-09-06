@@ -21,6 +21,8 @@ export const basketSlice = createSlice({
       index >= 0 ? newBasket.splice(index, 1) : console.warn("Can't Delete");
       state.items = newBasket;
     },
+
+    //don't use the filter here because it will get rid all item with that id
   },
 });
 
