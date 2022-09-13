@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useSelector } from "react-redux";
 import Header from "../components/Header";
 import { selectItems, selectTotal } from "../slices/basketSlice";
-import CheckoutProduct from "../components/CheckoutProduct";
+import CheckOutProduct from "../components/CheckoutProduct";
 import Currency from "react-currency-formatter";
 import { useSession } from "next-auth/client";
 import { loadStripe } from "@stripe/stripe-js";
@@ -11,7 +11,7 @@ import axios from "axios";
 const stripePromise = loadStripe(process.env.stripe_public_key); //for the key to be published(All CAP won't work); check next.config.js
 
 //for test card : 4242 4242 4242 4242  04/24  424
-//after login stripe cli run in vs terminal to get STRIPE_SIGNING_SECRET:  stripe listen --forward-to localhost:3000/api/webhook
+//after login stripe cli run in VSCode terminal to get STRIPE_SIGNING_SECRET:  stripe listen --forward-to localhost:3000/api/webhook
 //re-auth after 90 days
 
 function checkout() {
@@ -51,7 +51,7 @@ function checkout() {
             </h1>
 
             {items.map((item, i) => (
-              <CheckoutProduct
+              <CheckOutProduct
                 key={i}
                 id={item.id}
                 title={item.title}
