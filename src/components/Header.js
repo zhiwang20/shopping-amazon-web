@@ -57,7 +57,7 @@ function Header() {
               {items.length}
             </span>
             <ShoppingCartIcon className="h-10" />
-            <p className="hidden md:inline h-8font-extrabold md:text-sm">
+            <p className="hidden md:inline font-extrabold md:text-sm mt-2">
               Basket
             </p>
           </div>
